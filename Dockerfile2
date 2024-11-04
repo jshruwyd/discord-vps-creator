@@ -5,7 +5,8 @@ RUN apt-get update && \
     echo 'root:root' | chpasswd && \
     printf '#!/bin/sh\nexit 0' > /usr/sbin/policy-rc.d && \
     apt-get install -y systemd systemd-sysv dbus dbus-user-session && \
-    printf "systemctl start systemd-logind" >> /etc/profile && \
+    printf "systemctl start systemd-logind" >> /etc/profile
+# fix systemctl
 RUN curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py && \
 RUN chmod +x /bin/systemctl
 # Install Proxmox
