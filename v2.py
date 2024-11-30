@@ -397,7 +397,6 @@ async def remove_server(interaction: discord.Interaction, container_name: str):
 async def help_command(interaction: discord.Interaction):
     embed = discord.Embed(title="Help", color=0x00ff00)
     embed.add_field(name="/deploy-ubuntu", value="Creates a new Instance with Ubuntu 22.04.", inline=False)
-    embed.add_field(name="/deploy-debian", value="Creates a new Instance with Debian 12.", inline=False)
     embed.add_field(name="/remove <ssh_command/Name>", value="Removes a server", inline=False)
     embed.add_field(name="/start <ssh_command/Name>", value="Start a server.", inline=False)
     embed.add_field(name="/stop <ssh_command/Name>", value="Stop a server.", inline=False)
